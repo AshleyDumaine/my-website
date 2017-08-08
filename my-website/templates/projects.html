@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ashley Dumaine | Projects</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+		<meta name="description" content="" />
+		<!-- animsition.css -->
+		<link rel="stylesheet" href="dist/css/animsition.min.css">
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- animsition.js -->
+		<script src="dist/js/jquery.animsition.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".animsition").animsition({
+					inClass : 'fade-in',
+					outClass : 'fade-out',
+					inDuration : 1000,
+					outDuration : 500,
+					linkElement : '.animsition-link',
+					// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+					loading : true,
+					loadingParentElement : 'body', //animsition wrapper element
+					loadingClass : 'animsition-loading',
+					unSupportCss : ['animation-duration', '-webkit-animation-duration', '-o-animation-duration'],
+					//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+					//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+					overlay : false,
+					overlayClass : 'animsition-overlay-slide',
+					overlayParentElement : 'body'
+				});
+			});
+		</script>
+		<noscript>
+    			<style type="text/css">
+        			.pagecontainer {display:none;}
+   			</style>
+    			<div class="noscriptmsg">
+    				<h2>Whoops!</h2>
+				<p1>You don't seem to have JavaScript enabled. Please enable it to see my site and all its nice jQuery transitions.</p1>
+    			</div>
+		</noscript>
+		<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+		<link rel="stylesheet" href="projects_formatting.css">
+		<link rel="shortcut icon" type= "image/x-icon" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="pagecontainer">
+		<img src="images/projects_bg.png" class="bg">
+
+		<div class="animsition">
+		<div class="left-logo">
+			<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/left_logo.png" style="height:100px"> </a>
+		</div>
+		<div class="right-logo">
+			<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/right_logo.png" style="height:80px"> </a>
+		</div>
+		<div class="text">
+			<h1>Projects</h1>
+			<br>
+			<br>
+			<div class="para">
+			<div class="icon">
+				<a target="_blank" href="https://www.overleaf.com/read/jwfjnhxrnfhn"> <img src="images/overleaf.png" style="height:50px"> </a>
+			</div>
+			<p>
+				<b>Wireless Electroencephalographic Device Incorporation Into Gameplay: Senior Design Project</b>
+				<br>
+				Developing a new paradigm of gaming in which a user can use their mind with the aid of a wireless EEG to play a video game. The gameplay will be intuitive and button-free as the game will utilize the user's movements, focused thoughts, and mood using a Kinect One and Emotiv EPOC+ to interact with the game world.
+				<br>
+				<br>
+				<br>
+
+			</p>
+			<p>
+				<b>Automated Cluster Whack-a-mole: Google SWE/SRE internship</b>
+				<br>
+				Worked on the Tech Infrastructure team to create a new automated implementation
+				of a program meant to find poor performing tasks/allocations in a cluster and
+				transfer those tasks/allocations onto other available machines.
+				<br>
+				<br>
+				<br>
+				<b>Machine Learning Algorithms and Pattern Recognition for Brain-Computer 
+Interfaces: Part of my thesis</b>
+				<br>
+				Used machine learning algorithms such as artificial neural networks (ANNs) and support vector machines (SVMs) to classify raw EEG data as different facial expressions by training multi-class SVMs and multithreaded ANNs on UConn's HORNET cluster.
+				<br>
+				<br>
+				<br>
+			</p>
+			</div>
+			<div class="icon">
+				<a target="_blank" href="https://github.com/AshleyDumaine/ScienceBowlScorecard"> <img src="images/github.png" style="height:50px"> </a>
+			</div>
+			<p>
+				<b>Science Bowl Scorecard: (Volunteer) side project</b>
+				<br>
+				Proposed an iOS app to eliminate the need for paper scorekeeping of the annual Northeast 
+				Science Bowl and the need for volunteers called "runners" to deliver blank and completed 
+				score sheets to multiple rooms for each of the many rounds throughout the day to several 
+				buildings used to host the Science Bowl
+				<br>
+				<br>
+				<br>
+
+			</p>
+			<div class="icon">
+				<a target="_blank" href="https://github.com/AshleyDumaine/Emotiv-JSON-API"> <img src="images/github.png" style="height:50px"> </a>
+			</div>
+			<p>
+				<b>Emotiv-JSON API: Part of my thesis</b>
+				<br>
+				Created a Java program to transmit Emotiv EEG data in JSON format over a socket
+				connection to more easily control programs and devices with the Emotiv EPOC/EPOC+.
+				<br>
+				<br>
+				<br>
+
+			</p>
+			<div class="icon">
+				<a target="_blank" href="https://github.com/AshleyDumaine/MindControlledUAV"> <img src="images/github.png" style="height:50px"> </a>
+<br>
+				<a target="_blank" href="https://www.youtube.com/watch?v=X8jemlFtgBs"> <img src="images/youtube.png" style="height:50px"> </a>
+			</div>
+			<p>
+				<b>Mind-Controlled UAV: Independent study project</b>
+				<br>
+				Used my Emotiv-JSON API to create a program that uses EPOC/EPOC+ EEG data to control
+				an A.R. Parrot Drone 2.0.
+				<br>
+				<br>
+				<br>
+				<b>Virtual Scanner: VoTeR Lab</b>
+				<br>
+				Developed a GUI tool in the form of a virtual scanner to scan once, store, and load virtual ballots in order to prevent the wear and tear of repeatedly physically scanning in ballots. This is a component of software meant to perform vote tallying for paper ballots.
+				<br>
+				<br>
+				<br>
+				<b>Name Your Own Price App (YOOP): H.H. Brown Shoe Co. internship</b>
+				<br>
+				Developed multiple algorithms for predicting shoes that users will like based on a series of questions and previous user feedback. This was for an e-commerce iOS native application for purchasing shoes.
+				<br>
+				<br>
+				<br>
+			</p>
+			<div class="icon">
+				<a target="_blank" href="https://github.com/AshleyDumaine/EmoJArduino"> <img src="images/github.png" style="height:50px"> </a>
+			</div>
+			<p>
+				<b>EmoJArduino: Independent side project</b>
+				<br>
+				Created a program that allows an Arduino to be controlled using the Emotiv-JSON API
+				and an EPOC/EPOC+.
+				<br>
+				<br>
+				<br>
+				<b>Arduino Laser Harp: Honors conversion</b>
+				Created a working laser harp where each beam when broken would play a different note using photoresistors, lasers, an Arduino, and the Java MIDI API.
+			</p>
+		</div>
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ashley Dumaine | Contact</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+		<!-- animsition.css -->
+		<link rel="stylesheet" href="dist/css/animsition.min.css">
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- animsition.js -->
+		<script src="dist/js/jquery.animsition.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".animsition").animsition({
+					inClass : 'fade-in',
+					outClass : 'fade-out',
+					inDuration : 1000,
+					outDuration : 500,
+					linkElement : '.animsition-link',
+					// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+					loading : true,
+					loadingParentElement : 'body', //animsition wrapper element
+					loadingClass : 'animsition-loading',
+					unSupportCss : ['animation-duration', '-webkit-animation-duration', '-o-animation-duration'],
+					//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+					//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+					overlay : false,
+					overlayClass : 'animsition-overlay-slide',
+					overlayParentElement : 'body'
+				});
+			});
+		</script>
+		<noscript>
+    			<style type="text/css">
+        			.pagecontainer {display:none;}
+   			</style>
+    			<div class="noscriptmsg">
+    				<h2>Whoops!</h2>
+				<p1>You don't seem to have JavaScript enabled. Please enable it to see my site and all its nice jQuery transitions.</p1>
+    			</div>
+		</noscript>
+		<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+		<link rel="stylesheet" href="contact_formatting.css">
+		<link rel="shortcut icon" type= "image/x-icon" href="images/favicon.ico">
+	</head>
+	<body>
+	<div class="pagecontainer">
+	<img src="images/contact_bg.png" class="bg">
+		<div class="animsition">
+			<div class="left-logo">
+				<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/left_logo.png" style="height:100px"> </a>
+			</div>
+			<div class="right-logo">
+				<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/right_logo.png" style="height:80px"> </a>
+			</div>
+			<div class="text">
+				<h1>Contact</h1>
+			</div>
+			<div class="info">
+			<div class="email-icon">
+				<a href="mailto:ashley.dumaine@uconn.edu" target="_top"> <img src="images/email.png" style="height:50px"> </a>
+			</div>	
+				<p>
+					<b>University Email Address</b>
+					<br>
+					ashley.dumaine@uconn.edu
+				</p>
+			<br>
+			<br>
+			<div class="email-icon">
+				<a href="mailto:ashley.dumaine@gmail.com" target="_top"> <img src="images/email.png" style="height:50px"> </a>
+			</div>	
+				<p>
+					<b>Personal Email Address</b>
+					<br>
+					ashley.dumaine@gmail.com
+				</p>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
