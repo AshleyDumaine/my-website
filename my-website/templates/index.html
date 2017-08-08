@@ -1,111 +1,65 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Ashley Dumaine | Software Production Engineer</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
-		<meta name="description" content="A software engineer looking to make an impact on the world" />
-		<meta name="keywords" content="Ashley Dumaine, software engineer, University of Connecticut, UConn, computer science, engineering, programmer, developer">
-		<style>
-			div.links {
-				display: inline-block;
-			}
-			div.button1 {
-				display: inline-block;
-			}
-			div.button2 {
-				display: inline-block;
-			}
-			a {
-				display: block;
-				height: 100%;
-			}
-		</style>
-		<!-- animsition.css -->
-		<link rel="stylesheet" href="dist/css/animsition.min.css">
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<!-- animsition.js -->
-		<script src="dist/js/jquery.animsition.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$(".animsition").animsition({
-					inClass : 'fade-in',
-					outClass : 'fade-out',
-					inDuration : 500,
-					outDuration : 500,
-					linkElement : '.animsition-link',
-					// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-					loading : true,
-					loadingParentElement : 'body', //animsition wrapper element
-					loadingClass : 'animsition-loading',
-					unSupportCss : ['animation-duration', '-webkit-animation-duration', '-o-animation-duration'],
-					//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-					//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-					overlay : false,
-					overlayClass : 'animsition-overlay-slide',
-					overlayParentElement : 'body'
-				});
-			});
-		</script>
-		<noscript>
-    			<style type="text/css">
-        			.pagecontainer {display:none;}
-   			</style>
-    			<div class="noscriptmsg">
-    				<h2>Whoops!</h2>
-				<p>You don't seem to have JavaScript enabled. Please enable it to see my site and all its nice jQuery transitions.</p>
-    			</div>
-		</noscript>
-		<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-		<link rel="stylesheet" href="index_formatting.css">
-		<link rel="shortcut icon" type= "image/x-icon" href="images/favicon.ico">
-	</head>
-	<body>
-		<div class="pagecontainer">
-		<div class="animsition">
-			<div class="row no-gutters">
-				<div class="col-md-6">
-			<div class="left-logo">
-				<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/left_logo.png" style="height:100px"> </a>
-			</div>
-					<div class="about">
+{% extends "layout.html" %}
+{% block body %}		
+<div class="pagecontainer">
+	<div class="animsition">
+		<div class="row no-gutters">
+			<div class="col-md-6">
+				<div class="left-logo">
+					<a href="{{ url_for('homepage') }}">
+						<img src="{{ url_for('static', filename='images/left_logo.png') }}" style="height:100px">
+					</a>
+				</div>
+				<div class="about">
 					<h1>About Me</h1>
-						<a href="http://www.engr.uconn.edu/~amd11037/about.html" class="animsition-link"> </a>
+						<a href="{{ url_for('about') }}" class="animsition-link"> </a>
 					</div>
 				</div>
 				<div class="col-md-6">
-			<div class="right-logo">
-				<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/right_logo.png" style="height:80px"> </a>
-			</div>
+					<div class="right-logo">
+						<a href="{{ url_for('homepage') }}">
+							<img src="{{ url_for('static', filename='images/right_logo.png') }}" style="height:80px">
+						</a>
+					</div>
 					<div class="info">
 						<div class="buttons">
 							<div class="button1">
-								<a href="http://www.engr.uconn.edu/~amd11037/contact.html" class="animsition-link"> <img src="images/contact.png" alt="Contact button"> </a>
+								<a href="{{ url_for('contact') }}" class="animsition-link">
+									<img src="{{ url_for('static', filename='images/contact.png') }}" alt="Contact button">
+								</a>
 							</div>
 							<div class="button2">
-								<a target="_blank" href="https://drive.google.com/file/d/0B7GMm8pVHz1SenFHZGt4aEVOREU/view?usp=sharing" > <img src="images/resume.png" alt="Link to resume button" > </a>
+								<a target="_blank" href="https://drive.google.com/file/d/0B7GMm8pVHz1SenFHZGt4aEVOREU/view?usp=sharing" >
+									<img src="{{ url_for('static', filename='images/resume.png') }}" alt="Link to resume button" >
+								</a>
 							</div>
 							<br>
 							<br>
 							<div class="all-links">
-							<div class="links" id="linkedin">
-								<a target="_blank" href="https://www.linkedin.com/in/ashleydumaine" > <img src="images/linkedin.png" style="height:60px" alt="LinkedIn profile link"> </a>
-							</div>
-							<div class="links" id="googleplus">
-								<a target="_blank" href="https://plus.google.com/+AshleyDumaine/about"> <img src="images/googleplus.png" style="height:60px" alt="Google plus profile link"> </a>
-							</div>
-							<div class="links" id="github">
-								<a target="_blank" href="https://github.com/AshleyDumaine" > <img src="images/github.png" style="height:60px" alt="GitHub profile link"> </a>
-							</div>
-							<div class="links" id="facebook">
-                                                                <a target="_blank" href="https://www.facebook.com/ashleydumaine" > <img src="images/facebook.png" style="height:60px" alt="Facebook profile link"> </a>
-                                                        </div>
-							<div class="links" id="twitter">
-								<a target="_blank" href="https://twitter.com/ashleydumaine" > <img src="images/twitter.png" style="height:60px" alt="Twitter profile link"> </a>
-							</div>
+								<div class="links" id="linkedin">
+									<a target="_blank" href="https://www.linkedin.com/in/ashleydumaine">
+										<img src="{{ url_for('static', filename='images/linkedin.png') }}" style="height:60px" alt="LinkedIn profile link">
+									</a>
+								</div>
+								<div class="links" id="googleplus">
+									<a target="_blank" href="https://plus.google.com/+AshleyDumaine/about">
+										<img src="{{ url_for('static', filename='images/googleplus.png') }}" style="height:60px" alt="Google plus profile link">
+									</a>
+								</div>
+								<div class="links" id="github">
+									<a target="_blank" href="https://github.com/AshleyDumaine">
+										<img src="{{ url_for('static', filename='images/github.png') }}" style="height:60px" alt="GitHub profile link">
+									</a>
+								</div>
+								<div class="links" id="facebook">
+									<a target="_blank" href="https://www.facebook.com/ashleydumaine">
+										<img src="{{ url_for('static', filename='images/facebook.png') }}" style="height:60px" alt="Facebook profile link">
+									</a>
+								</div>
+								<div class="links" id="twitter">
+									<a target="_blank" href="https://twitter.com/ashleydumaine">
+										<img src="{{ url_for('static', filename='images/twitter.png') }}" style="height:60px" alt="Twitter profile link">
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -115,24 +69,23 @@
 			<div class="row no-gutters">
 				<div class="col-md-4">
 					<div class="thesis">
-					<h1>Thesis</h1>
-						<a href="http://www.engr.uconn.edu/~amd11037/thesis.html" class="animsition-link"> </a>
+						<h1>Thesis</h1>
+						<a href="{{ url_for('thesis') }}" class="animsition-link"> </a>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="projects">
-					<h1>Projects</h1>
-						<a href="http://www.engr.uconn.edu/~amd11037/projects.html" class="animsition-link"> </a>
+						<h1>Projects</h1>
+						<a href="{{ url_for('projects') }}" class="animsition-link"> </a>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<h1>FAQ</h1>
 					<div class="faq">
-						<a href="http://www.engr.uconn.edu/~amd11037/faq.html" class="animsition-link"> </a>
+						<h1>FAQ</h1>
+						<a href="{{ url_for('faq') }}" class="animsition-link"> </a>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
-	</body>
-</html>
+	</div>
+{% endblock %}

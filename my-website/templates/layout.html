@@ -1,0 +1,49 @@
+<!doctype html>
+<title>Ashley Dumaine | DevOps Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+<meta name="description" content="A software engineer looking to make an impact on the world" />
+<meta name="keywords" content="Ashley Dumaine, software engineer, University of Connecticut, UConn, computer science, engineering, programmer, developer">
+
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_formatting.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css">
+<link rel="shortcut icon" type= "image/x-icon" href="images/favicon.ico">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".animsition").animsition({
+			inClass : 'fade-in',
+			outClass : 'fade-out',
+			inDuration : 500,
+			outDuration : 500,
+			linkElement : '.animsition-link',
+			// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+			loading : true,
+			loadingParentElement : 'body', //animsition wrapper element
+			loadingClass : 'animsition-loading',
+			unSupportCss : ['animation-duration', '-webkit-animation-duration', '-o-animation-duration'],
+			//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+			//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+			overlay : false,
+			overlayClass : 'animsition-overlay-slide',
+			overlayParentElement : 'body'
+		});
+	});
+</script>
+<noscript>
+	<style type="text/css">
+        	.pagecontainer {display:none;}
+   	</style>
+    	<div class="noscriptmsg">
+    		<h2>Whoops!</h2>
+		<p>You don't seem to have JavaScript enabled. Please enable it to see my site and all its nice jQuery transitions.</p>
+    	</div>
+</noscript>
+<div class=body>
+	{% block body %}{% endblock %}
+</div>
