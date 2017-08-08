@@ -1,91 +1,30 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Ashley Dumaine | About</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
-		<meta name="description" content="" />
-		<!-- animsition.css -->
-		<link rel="stylesheet" href="dist/css/animsition.min.css">
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<!-- animsition.js -->
-		<script src="dist/js/jquery.animsition.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$(".animsition").animsition({
-					inClass : 'fade-in',
-					outClass : 'fade-out',
-					inDuration : 1000,
-					outDuration : 500,
-					linkElement : '.animsition-link',
-					// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-					loading : true,
-					loadingParentElement : 'body', //animsition wrapper element
-					loadingClass : 'animsition-loading',
-					unSupportCss : ['animation-duration', '-webkit-animation-duration', '-o-animation-duration'],
-					//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-					//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-					overlay : false,
-					overlayClass : 'animsition-overlay-slide',
-					overlayParentElement : 'body'
-				});
-			});
-		</script>
-		<noscript>
-    			<style type="text/css">
-        			.pagecontainer {display:none;}
-   			</style>
-    			<div class="noscriptmsg">
-    				<h2>Whoops!</h2>
-				<p1>You don't seem to have JavaScript enabled. Please enable it to see my site and all its nice jQuery transitions.</p1>
-    			</div>
-		</noscript>
-		<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-		<link rel="stylesheet" href="about_formatting.css">
-		<link rel="shortcut icon" type= "image/x-icon" href="images/favicon.ico">
-	</head>
-	<body>
-		<div class="pagecontainer">
-		<img src="images/about_bg.png" class="bg">
+{% extends "layout.html" %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about_formatting.css') }}">
+<div class="pagecontainer">
+	<img src="{{ url_for('static', filename='images/about_bg.png') }}" class="bg">
 		<div class="animsition">
-		<div class="left-logo">
-			<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/left_logo.png" style="height:100px"> </a>
-		</div>
-		<div class="right-logo">
-			<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/right_logo.png" style="height:80px"> </a>
-		</div>
-		<div class="text">
-			<h1>About Me</h1>
-			<br>
-			<br>
-			<p>
-				If someone had told me years ago that I would be on the cover of a magazine,
-				create a mind-controlled quadcopter, help develop a native iOS app for a company,
-				and land an internship at a tech giant all before my senior year of college, I most
-				likely would not have believed them.
+			<div class="left-logo">
+				<a href="{{ url_for('homepage') }}">
+					<img src="{{ url_for('static', filename='images/left_logo.png') }}" style="height:100px">
+				</a>
+			</div>
+			<div class="right-logo">
+				<a href="{{ url_for('homepage') }}">
+					<img src="{{ url_for('static', filename='images/right_logo.png') }}" style="height:80px">
+				</a>
+			</div>
+			<div class="text">
+				<h1>About Me</h1>
 				<br>
 				<br>
-				Despite having no programming experience prior to college,
-				I have managed to stand out as an honors student in UConn’s
-				Computer Science and Engineering program. I enjoy inspiring
-				students of all ages such as at UConn's Open House events and
-				the annual Connecticut Invention Conventions. I seek to leave
-				my mark on the world of technology and to influence prospective
-				students to explore the exciting fields of engineering and
-				computer programming along the way.
+				<p>
+				If someone had told me years ago that I would be on the cover of a magazine, create a mind-controlled quadcopter, help develop a native iOS app for a company, and land an internship at a tech giant all before my senior year of college, I most likely would not have believed them. 
 				<br>
 				<br>
-				Through my dedication and passion for programming, I’ve been able to work on
-				many interesting and exciting projects which have taken me above and beyond
-				the required understanding of my courses and have even given me recognition
-				throughout my major’s department. However, I strongly believe in never resting
-				on one’s laurels and am continuously looking for new challenges to take on.
-			</p>
-		</div>
+				Despite having no programming experience prior to college, I have managed to stand out as an honors student in UConn’s Computer Science and Engineering program. I enjoyed inspiring students of all ages such as at UConn's Open House events and the annual Connecticut Invention Conventions. Nowadays I work on developing tools and workflows to ease the hassle of building, testing, and shipping code at Connecticut's first ever unicorn.
+				</p>
+			</div>
 		</div>
 	</div>
-	</body>
-</html>
+{% endblock %}
