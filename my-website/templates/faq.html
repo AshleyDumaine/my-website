@@ -1,144 +1,75 @@
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<title>Ashley Dumaine | FAQ</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
-		<meta name="description" content="" />
-		<style>
-
-		</style>
-		<!-- animsition.css -->
-		<link rel="stylesheet" href="dist/css/animsition.min.css">
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<!-- animsition.js -->
-		<script src="dist/js/jquery.animsition.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$(".animsition").animsition({
-					inClass : 'fade-in',
-					outClass : 'fade-out',
-					inDuration : 1000,
-					outDuration : 500,
-					linkElement : '.animsition-link',
-					// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-					loading : true,
-					loadingParentElement : 'body', //animsition wrapper element
-					loadingClass : 'animsition-loading',
-					unSupportCss : ['animation-duration', '-webkit-animation-duration', '-o-animation-duration'],
-					//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-					//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-					overlay : false,
-					overlayClass : 'animsition-overlay-slide',
-					overlayParentElement : 'body'
-				});
-			});
-		</script>
-		<noscript>
-    			<style type="text/css">
-        			.pagecontainer {display:none;}
-   			</style>
-    			<div class="noscriptmsg">
-    				<h2>Whoops!</h2>
-				<p1>You don't seem to have JavaScript enabled. Please enable it to see my site and all its nice jQuery transitions.</p1>
-    			</div>
-		</noscript>
-		<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-		<link rel="stylesheet" href="faq_formatting.css">
-		<link rel="shortcut icon" type= "image/x-icon" href="images/favicon.ico">
-	</head>
-	<body>
-	<div class="pagecontainer">
-	<img src="images/faq_bg.png" class="bg">
-		<div class="animsition">
-			<div class="left-logo">
-				<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/left_logo.png" style="height:100px"> </a>
-			</div>
-			<div class="right-logo">
-				<a href="http://www.engr.uconn.edu/~amd11037/index.html"> <img src="images/right_logo.png" style="height:80px"> </a>
-			</div>
-			<div class="text">
-				<h1>FAQ</h1>
+{% extends "layout.html" %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/faq_formatting.css') }}">
+<div class="pagecontainer">
+        <img src="{{ url_for('static', filename='images/faq_bg.png') }}" class="bg">
+        <div class="animsition">
+                <div class="left-logo">
+                        <a href="{{ url_for('homepage') }}">
+                                <img src="{{ url_for('static', filename='images/left_logo.png') }}" style="height:100px">
+                        </a>
+                </div>
+                <div class="right-logo">
+                        <a href="{{ url_for('homepage') }}">
+                                <img src="{{ url_for('static', filename='images/right_logo.png') }}" style="height:80px">
+                        </a>
+                </div>
+		<div class="text">
+			<h1>FAQ</h1>
+			<br>
+			<br>
+			<p>
+				<b>Q1: Did you program before coming to college?</b>
+				<br>
+				A2: No, my high school didn't even have engineering classes until AFTER I graduated.
+				I never was introduced to it before college so I never explored it on my own time.
+				(Explore Engineering 2011 at UConn doesn't count, the CSE department wasn't showcased
+				very well.)
 				<br>
 				<br>
-				<p>
-					<b>Q1: Did you program before coming to college?</b>
-					<br>
-					A2: No, my high school didn't even have engineering classes until AFTER I graduated.
-					I never was introduced to it before college so I never explored it on my own time.
-					(Explore Engineering 2011 at UConn doesn't count, the CSE department wasn't showcased
-					very well.)
-					<br>
-					<br>
-
-					<b>Q2: What made you choose CSE/Engineering then?</b>
-					<br>
-					A2: I came to UConn as a mechanical engineer but switched out February of my second
-					semester. CSE seemed like a more rewarding albeit a more challenging field. I'm not
-					sure if it actually is, I didn't feel like sticking around the ME department long
-					enough to find out. I only picked that department because they advertised it as what
-					the Mythbusters do. Engineering I figured would be a good fit for me since I enjoy
-					math and science.
-					<br>
-					<br>
-
-					<b>Q3: What's your favorite language?</b>
-					<br>
-					A3: Probably Java because that was my first "real" language and I code the most often
-					in it. It's my go-to language for interviews like my Google ones. I also like C
-					(when I don't have memory leaks or multithreaded bugs) and Objective-C for whenever
-					I need to make a mobile app like at hackathons.
-					<br>
-					<br>
-
-					<b>Q4: Why not Python?</b>
-					<br>
-					A4: I haven't really done much with it besides 1 honors conversion project back in
-					2014, translating a huge Python file to Go during my internship (don't ask why), and
-					doing a bunch of HackerRank challenges in it.
-					I'm hoping to use more Python in my thesis to get more experience with it.
-					<br>
-					<br>
-
-					<b>Q5: Emacs or Vi?</b>
-					<br>
-					A5: I'm not telling you which because I know better than to start a flame war over
-					which is the superior editor. I use both since it's good to know both, but I prefer
-					one over the other.
-					<br>
-					<br>
-
-					<b>Q6: What are you doing after college?</b>
-					<br>
-					A6: I've decided to go into industry after graduation. I was strongly considering grad 
-					school for a while but decided it would pay off more to get real industry experience.
-					<br>
-					<br>
-
-					<b>Q7: Have you ever been to a UConn basketball game?</b>
-					<br>
-					A7: No, I don't have time for that. I did at least watch the 2014 final match between
-					UConn and Kentucky on my laptop from the comfort of my own dorm room... and then I got
-					to watch the ensuing chaos from one of the study lounges as literally thousands of people
-					came pouring out of Gampel screaming and more came running from their dorms.
-					<br>
-					<br>
-
-					<b>Q8: Why is your thesis 3 semesters long?</b>
-                                        <br>
-					A8: I'm a University Scholar, which means I'm working on a massive thesis as an undergrad (compared to the 1-semester long
-					thesis that a regular Honors Scholar would do). There are only 28 of us for my graduating class. We're all 
-					working on <a href="http://universityscholars.uconn.edu/2015-university-scholars/">some interesting projects</a>, 
-					which would never fit into a single semester.
-					<br>
-					<br>
-				</p>
-			</div>
+				<b>Q2: What made you choose CSE/Engineering then?</b>
+				<br>
+				A2: I came to UConn as a mechanical engineer but switched out February of my second
+				semester. CSE seemed like a more rewarding albeit a more challenging field. I'm not
+				sure if it actually is, I didn't feel like sticking around the ME department long
+				enough to find out. I only picked that department because they advertised it as what
+				the Mythbusters do. Engineering I figured would be a good fit for me since I enjoy
+				math and science.
+				<br>
+				<br>
+				<b>Q3: What's your favorite language?</b>
+				<br>
+				A3: Python. I have the most fun programming in it whether it's making Flask apps
+				like this website or quickly whipping up scripts to do otherwise tedious automation 
+				tasks at my job like automatically mirroring git repositories or pruning continous integration
+				packages from a server.
+				<br>
+				<br>
+				<b>Q4: Emacs or Vi?</b>
+				<br>
+				A4: I'm not telling you which because I know better than to start a flame war over
+				which is the superior editor. I use both since it's good to know both, but I prefer
+				one over the other.
+				<br>
+				<br>
+				<b>Q5: Have you ever been to a UConn basketball game?</b>
+				<br>
+				A5: No, I didn't have time for that. I did at least watch the 2014 final match between
+				UConn and Kentucky on my laptop from the comfort of my own dorm room... and then I got
+				to watch the ensuing chaos from one of the study lounges as literally thousands of people
+				came pouring out of Gampel screaming and more came running from their dorms.
+				<br>
+				<br>
+				<b>Q6: Why was your thesis 3 semesters long?</b>
+				<br>
+				A6: I was a University Scholar, which means I worked on a massive thesis as an undergrad (compared to the 1-semester long
+				thesis that a regular Honors Scholar would do). There were only 28 of us for my graduating class. We all 
+				worked on <a href="http://universityscholars.uconn.edu/2015-university-scholars/">some interesting projects</a>, 
+				which would never have fit into a single semester.
+				<br>
+				<br>
+			</p>
 		</div>
-		</div>
-	</body>
-</html>
+	</div>
+</div>
+{% endblock %}
